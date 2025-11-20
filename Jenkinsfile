@@ -6,11 +6,11 @@ pipeline {
 
     environment {
      PATH = "C:\\Program Files\\Docker\\Docker\\resources\\bin;${env.PATH}"
-           JAVA_HOME = 'C:\\Program Files\\Java\\jdk-21'  // Adjust to your actual JDK pat
+           JAVA_HOME = 'C:\\Program Files\\Java\\jdk-17'  // Adjust to your actual JDK pat
         SONARQUBE_SERVER = 'SonarQubeServer'  // The name of the SonarQube server configured in Jenkins
-        SONAR_TOKEN = 'sqa_4a9cd5ae8e65c1d8a59395010075d01f8b60170e' // Store the token securely
+        SONAR_TOKEN = 'sqa_01cd847d3e1b2a091ff5a52eb8af9ac99e974b83' // Store the token securely
         DOCKERHUB_CREDENTIALS_ID = 'Docker_Hub'
-        DOCKERHUB_REPO = 'amirdirin/sep2_week5_f2025'
+        DOCKERHUB_REPO = 'saeid1993/sep2_week5_f2025'
         DOCKER_IMAGE_TAG = 'latest'
 
 
@@ -19,7 +19,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/ADirin/sep2_week5_inclass_s2.git'
+                git branch: 'main', url: 'https://github.com/amirsaeid93/OTP_2.git'
             }
         }
 
